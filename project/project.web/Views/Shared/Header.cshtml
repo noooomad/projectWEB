@@ -1,0 +1,85 @@
+﻿<header class="bg-body-light">
+    <nav class="navbar navbar-expand-lg bg-body-light">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+                        <img class="embl" src="~/Content/Images/embl.png" alt="эмблема">
+                        <div class="navbar-nav">
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Выпадающий список
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="voiti.html">Войти</a></li>
+                            <li>
+                            <li><a class="dropdown-item" href="reg.html">Зарегистрироваться  </a></li>
+                            <li>
+                            <li><a class="dropdown-item" href="#">Информация о нас</a></li>
+                            <li>
+
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Отзывы</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Бургеры", "Burgers", "Home", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Роллы", "Rolli", "Home", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Пицца", "Pizza", "Home", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Паста", "Pasta", "Home", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Супы", "Supi", "Genres", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Салаты", "Salat", "Genres", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Мясо и Рыба", "Zakiski", "Genres", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Десерты", "Deserti", "Genres", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Напитки", "Alcogoli", "Genres", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+                    <li class="nav-item fonto1">
+                        @Html.ActionLink("Вегетарианское", "Vegan", "Genres", null, new { @class = "nav-link link-danger px-2 text-black" })
+                    </li>
+
+             
+
+
+</div>
+
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                <button class="btn btn-outline-success" type="submit">Поиск</button>
+            </form>
+        </div>
+
+    </nav>
+
+
+
+
+</header>
