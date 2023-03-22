@@ -265,6 +265,7 @@
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Home\burgers.cshtml" />
     <Content Include="Views\Home\Rolli.cshtml" />
+    <Content Include="Views\Home\Alcogoli.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
