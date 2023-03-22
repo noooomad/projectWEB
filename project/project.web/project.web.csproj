@@ -267,6 +267,8 @@
     <Content Include="Views\Home\Rolli.cshtml" />
     <Content Include="Views\Home\Alcogoli.cshtml" />
     <Content Include="Views\Home\Deserti.cshtml" />
+    <Content Include="Views\Home\Pasta.cshtml" />
+    <Content Include="Views\Home\Pizza.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
