@@ -1,54 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<link>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="sourse/style/style.css">
-</link>
-<title>Пицца</title>
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="sourse/styles/style.css">
+    <title>Пицца</title>
 </head>
-
-<body bgcolor="black">
+<body class="back_col">
     <header>
-        <div class="hero">
-            
-            <nav>
-                <div>
 
-                    <h2 class="logo"> <a href="index.html"> The world of </a> </h2>
-                    <h2 class="logo"> <span> TASTE </span> </h2>
-                </div>
-                <div>
-                    <ul>
-                        <li><a href="burger.html">БУРГЕРЫ</a></li>
-                        <li><a href="rolli.html">РОЛЛЫ</a></li>
-                        <li><a href="pizza.html">ПИЦЦА</a></li>
-                        <li><a href="pasta.html">ПАСТА</a></li>
-                        <li><a href="supi.html">СУПЫ</a></li>
-                        <li><a href="salat.html">САЛАТЫ</a></li>
-                        <li><a href="measo_riba.html">МЯСО И РЫБА </a></li>
-                        <li><a href="deserti.html">ДЕСЕРТЫ</a></li>
-                        <li><a href="napitki.html">НАПИТКИ</a></li>
-                        <li><a href="vegan.html">ВЕГАТЕРИАНСКОЕ</a></li>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+                            <img class="embl" src="sourse/images/embl.png" alt="эмблема">
+                            <div class="navbar-nav">
+
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Выпадающий список
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                       
+                                        <li><a class="dropdown-item" href="voiti.html">Войти</a></li>
+                                        <li>
+                                            <li><a class="dropdown-item" href="#">Зарегистрироваться  </a></li>
+                                            <li>
+                                            <li><a class="dropdown-item" href="#">Информация о нас</a></li>
+                                            <li>
+
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Отзывы</a></li>
+                                    </ul>
+                                </li>
+
+                          
+                           
+                                <a class="nav-link active" aria-current="page" href="burgers.html"
+                                   >Бургеры</a>
+                                    <a class="nav-link active" aria-current="page" href="rolli.html"
+                                   >Роллы</a>
+                                <a class="nav-link active" aria-current="page" href="pizza.html"
+                                   >Пицца</a>
+                                    <a class="nav-link active" aria-current="page" href="pasta.html"
+                                    >Паста</a>
+                                    <a class="nav-link active" aria-current="page" href="supi.html"
+                                    >Супы</a>
+                                <a class="nav-link active" aria-current="page" href="salat.html"
+                                   >Салаты</a>
+                                <a class="nav-link active" aria-current="page" href="zakiski.html"
+                                   >Мясо и Рыба</a>
+                                <a class="nav-link active" aria-current="page" href="deserti.html"
+                                >Десерты</a>
+                                <a class="nav-link active" aria-current="page" href="alcogoli.html"
+                                    >Напитки</a>
+                                <a class="nav-link active" aria-current="page" href="vegan.html"
+                                    >Вегетаринское</a>
+
+                            </div>
 
                     </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    </form>
                 </div>
-                <div class="knopka">
-                    <button type="button"> ВОЙТИ</button>
-                </div>
-            </nav>
+            </div>
+        </nav>
+
+        
+        </header>
+        
+        <sectoin>
+        
+        <div class="container">
+        <div class="menu">
+        <h1 class="raz">Pizza</h1>
+        <h2 class="menu-group-heading"> </h2>
+        <div class="menu-group">
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_6-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">VEGETARIANA</span>
+        <span class="menu-item-price">$14.00</span>
+        </h3>
+        <p class="menu-item-description">
+        VEGETARIANA С ЗАПЕЧЕННЫМИ ОВОЩАМИ И ДОМАШНИЙ ВЕГАНСКИЙ СЫР
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
         </div>
+        
+        
+        
+        
+        </div>
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_7-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name"> AMERICANA</span>
+        <span class="menu-item-price">$15.50</span>
+        </h3>
+        <p class="menu-item-description">
+        AMERICANA С КУРИЦЕЙ, ВЕТЧИНОЙ, МАСЛИНАМИ И ГРИБАМИ С ТОМАТНЫМ СОУСОМ
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        
+        </div>
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/2022_24-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">САЛЯМИ</span>
+        <span
+        class="menu-item-price">$16.00</span>
+        </h3>
+        <p class="menu-item-description">
+        ПИЦЦА САЛЯМИ С ЖАРЕНЫМ СЛАДКИМ ПЕРЦЕМ И ИТАЛЬЯНСКИМ ТОМАТНЫМ СОУСОМ
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_41-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">СЛИВОЧНАЯ</span>
+        <span class="menu-item-price">$15.50</span>
+        </h3>
+        <p class="menu-item-description">
+        ПИЦЦА СЛИВОЧНАЯ БРОККОЛИ С САЛЯМИ, ИТАЛЬЯНСКИМ ТОМАТНЫМ СОУСОМ И МОЦАРЕЛЛОЙ
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        
+        </div>
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_47-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">REGINA</span>
+        <span class="menu-item-price">$14.50</span>
+        </h3>
+        <p class="menu-item-description">
+        ПИЦЦА REGINA СО СВЕЖИМИ ШАМПИНЬОНАМИ И ВЕТЧИНОЙ
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+        
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_5-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">QUATRO FORMAGGI</span>
+        <span class="menu-item-price">$15.50</span>
+        </h3>
+        <p class="menu-item-description">
+        QUATRO FORMAGGI С ЧЕТЫРЬМЯ СОРТАМИ СЫРА
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        
+        </div>
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_4-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">PEPPERONI</span>
+        <span class="menu-item-price">$16.00</span>
+        </h3>
+        <p class="menu-item-description">
+        PEPPERONI С ОСТРЫМ САЛЯМИ SALSICCIA
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        
+        
+        </div>
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_49-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">МАРГАРИТА</span>
+        <span class="menu-item-price">$13.00</span>
+        </h3>
+        <p class="menu-item-description">
+        МАРГАРИТА С МОЦАРЕЛЛОЙ И ИТАЛЬЯНСКИМ СОУСОМ ИЗ ПОМИДОРОВ
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        </div>
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_11-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">PARDUPIZZA</span>
+        <span class="menu-item-price">$14.50</span>
+        </h3>
+        <p class="menu-item-description">
+        PARDUPIZZA С ВЯЛЕНЫМИ ТОМАТАМИ, СОУСОМ ПЕСТО, КУРИНЫМ ФИЛЕ И СЛАДКИМ ПЕРЦЕМ И СЫРОМ МОЦАРЕЛЛА
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        </div>
+        <div class=" menu-item">
+        
+        <img class="menu-item-image" src="sourse/images/pizza_44-300x300.png" alt="klassika"> </img>
+        
+        <div class="menu-item-text">
+        
+        <h3 class="menu-item-heading">
+        
+        <span class="menu-item-name">ГРУША</span>
+        <span class="menu-item-price">$17.00</span>
+        </h3>
+        <p class="menu-item-description">
+        ПИЦЦА С ГРУШЕЙ И СЫРАМИ
+        </p>
+        
+        <a href="#" class="button10">Заказать</a>
+        
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
 
     </header>
-
-    <sectoin>
-
-    </sectoin>
-    <footer> </footer>
 </body>
-
 </html>
