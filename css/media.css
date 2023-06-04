@@ -10,6 +10,52 @@
     }
 }
 
+.customIMG {
+    width: 450px;
+    height:  400px; 
+    position: relative;
+}
+
+.drink{
+    width: 450px;
+    height: 350px;
+    position: relative;
+}
+
+.name {
+   position: relative;
+   left: 50px;
+   top: 10px;
+   color: white;
+}
+
+.menu-item-name{
+    color: white;
+    position: relative;
+    bottom: 250px;
+    left: 450px;
+}
+
+.menu-item-price{
+    color: white;
+    position: relative;
+    bottom: 250px;
+    left: 450px;
+}
+
+.menu-item-description{
+    color: white;
+    position: relative;
+    bottom: 250px;
+    left: 450px;
+}
+
+.button10{
+    position: relative;
+    bottom: 250px;
+    left: 450px;
+}
+
 @media (max-width: 1300px) {
     #reservation:before {
         background-image: none;
