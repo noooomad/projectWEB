@@ -1,0 +1,30 @@
+﻿@model Domain.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLog.cshtml";
+}
+@using (Html.BeginForm("Login", "SignIn", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+@Html.AntiForgeryToken()
+
+<div class="Login_block">
+    <a href="~/Home/Index">
+        <img class="logo" alt="Logo" src="~/Content/images/logo.png" />
+    </a>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.EditorFor(model => model.UserLogin, new { htmlAttributes = new { @class = "login", @id = "email" } })
+    @Html.ValidationMessageFor(model => model.UserLogin, "", new { @class = "text-warning" })
+
+    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "password", @id = "password" } })
+    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-warning" })
+
+    <input class="button" type="submit" value="Enter" />
+
+    <p class="Regist">
+        Not registered yet?
+        @Html.ActionLink("Create account", "Registration", "SignIn");
+    </p>
+</div>
+}
+
