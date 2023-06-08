@@ -47,6 +47,12 @@
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -101,184 +107,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\animate.css" />
-    <Content Include="Content\css\bootstrap-datetimepicker.css" />
-    <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\css\font-awesome.css" />
-    <Content Include="Content\css\jquery.bxslider.css" />
-    <Content Include="Content\css\magnific-popup.css" />
-    <Content Include="Content\css\media.css" />
-    <Content Include="Content\css\owl.carousel.min.css" />
-    <Content Include="Content\css\style.css" />
-    <Content Include="Content\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\images\%281%29Escolar-cu-sos-tahini-350-gr-300x300.png" />
-    <Content Include="Content\images\%2810%292022_23-300x300.png" />
-    <Content Include="Content\images\%2811%292022_15-300x300.png" />
-    <Content Include="Content\images\%2812%29carne_36-300x300.png" />
-    <Content Include="Content\images\%282%29maroc_1-300x300.png" />
-    <Content Include="Content\images\%283%29maroc_3-300x300.png" />
-    <Content Include="Content\images\%284%29carne_37-300x300.png" />
-    <Content Include="Content\images\%285%29carne_35-300x300.png" />
-    <Content Include="Content\images\%286%29carne_32-300x300.png" />
-    <Content Include="Content\images\%287%29carne_33-300x300.png" />
-    <Content Include="Content\images\%288%292022_2-300x300.png" />
-    <Content Include="Content\images\%289%29carne_34-300x300.png" />
-    <Content Include="Content\images\2022_24-300x300.png" />
-    <Content Include="Content\images\about-img.png" />
-    <Content Include="Content\images\antipasti_3-300x300.png" />
-    <Content Include="Content\images\banner.jpg" />
-    <Content Include="Content\images\barbekju.png" />
-    <Content Include="Content\images\Black-roll-600x600.png" />
-    <Content Include="Content\images\bonakva-gaz.png" />
-    <Content Include="Content\images\California-cheese-roll-600x600.png" />
-    <Content Include="Content\images\Canada-roll-600x600.png" />
-    <Content Include="Content\images\dejun29-300x300.png" />
-    <Content Include="Content\images\desert_13-300x300.png" />
-    <Content Include="Content\images\desert_16-300x300.png" />
-    <Content Include="Content\images\desert_20-300x300.png" />
-    <Content Include="Content\images\desert_21-300x300.png" />
-    <Content Include="Content\images\desert_23-300x300.png" />
-    <Content Include="Content\images\desert_24-300x300.png" />
-    <Content Include="Content\images\desert_5-300x300.png" />
-    <Content Include="Content\images\dine-img.png" />
-    <Content Include="Content\images\dots.jpg" />
-    <Content Include="Content\images\full-bg.png" />
-    <Content Include="Content\images\gallery-1.png" />
-    <Content Include="Content\images\gallery-10.png" />
-    <Content Include="Content\images\gallery-2.png" />
-    <Content Include="Content\images\gallery-3.png" />
-    <Content Include="Content\images\gallery-4.png" />
-    <Content Include="Content\images\gallery-5.png" />
-    <Content Include="Content\images\gallery-6.png" />
-    <Content Include="Content\images\gallery-7.png" />
-    <Content Include="Content\images\gallery-8.png" />
-    <Content Include="Content\images\gallery-9.png" />
-    <Content Include="Content\images\gavaiskii.png" />
-    <Content Include="Content\images\gribnoi.png" />
-    <Content Include="Content\images\Ika-tuna-roll-600x600.png" />
-    <Content Include="Content\images\italjanskii.png" />
-    <Content Include="Content\images\Kani-unagi-roll-600x600.png" />
-    <Content Include="Content\images\klassika.png" />
-    <Content Include="Content\images\laguna_redbull.png" />
-    <Content Include="Content\images\limonad-ananasovyi.png" />
-    <Content Include="Content\images\limonad-klubnichnyi.png" />
-    <Content Include="Content\images\logo.png" />
-    <Content Include="Content\images\maroc_2-300x300.png" />
-    <Content Include="Content\images\maroc_5-300x300.png" />
-    <Content Include="Content\images\menu-separator.png" />
-    <Content Include="Content\images\Mix-roll-600x600.png" />
-    <Content Include="Content\images\novyj-sajt_koktejl_arbuz-ogurec_redbull.png" />
-    <Content Include="Content\images\novyj-sajt_koktejl_tropika_redbull.png" />
-    <Content Include="Content\images\pasta-300x300.png" />
-    <Content Include="Content\images\pasta13-300x300.png" />
-    <Content Include="Content\images\pasta15-300x300.png" />
-    <Content Include="Content\images\pasta16-300x300.png" />
-    <Content Include="Content\images\pasta17-300x300.png" />
-    <Content Include="Content\images\pasta18.png" />
-    <Content Include="Content\images\pasta_4-300x300.png" />
-    <Content Include="Content\images\Philadelphia-double-roll-600x600.png" />
-    <Content Include="Content\images\Philadelphia-roll-600x600.png" />
-    <Content Include="Content\images\pizza_11-300x300.png" />
-    <Content Include="Content\images\pizza_4-300x300.png" />
-    <Content Include="Content\images\pizza_41-300x300.png" />
-    <Content Include="Content\images\pizza_44-300x300.png" />
-    <Content Include="Content\images\pizza_45-300x300.png" />
-    <Content Include="Content\images\pizza_47-300x300.png" />
-    <Content Include="Content\images\pizza_49-300x300.png" />
-    <Content Include="Content\images\pizza_5-300x300.png" />
-    <Content Include="Content\images\pizza_6-300x300.png" />
-    <Content Include="Content\images\pizza_7-300x300.png" />
-    <Content Include="Content\images\rich-bitter-limon.png" />
-    <Content Include="Content\images\rich-ti-mango.png" />
-    <Content Include="Content\images\sait-spaisi-burger.png" />
-    <Content Include="Content\images\salat_10-300x300.png" />
-    <Content Include="Content\images\salat_11-300x300.png" />
-    <Content Include="Content\images\salat_17-300x300.png" />
-    <Content Include="Content\images\salat_3-300x300.png" />
-    <Content Include="Content\images\salat_4-300x300.png" />
-    <Content Include="Content\images\salat_5-300x300.png" />
-    <Content Include="Content\images\salat_8-300x300.png" />
-    <Content Include="Content\images\samyi-vkusnyi.png" />
-    <Content Include="Content\images\selectDown.png" />
-    <Content Include="Content\images\slou.png" />
-    <Content Include="Content\images\supe-300x300.png" />
-    <Content Include="Content\images\supe_3-300x300.png" />
-    <Content Include="Content\images\supe_5-300x300.png" />
-    <Content Include="Content\images\supe_6-300x300.png" />
-    <Content Include="Content\images\supe_9-300x300.png" />
-    <Content Include="Content\images\Tempura-Tuna-spicy-Roll-600x600.png" />
-    <Content Include="Content\images\vegan_5-300x300.png" />
-    <Content Include="Content\images\vegan_6-300x300.png" />
-    <Content Include="Content\images\vip.png" />
-    <Content Include="Content\images\Yummy-roll-1-600x600.png" />
-    <Content Include="Content\js\bootstrap-datetimepicker.js" />
-    <Content Include="Content\js\bootstrap.min.js" />
-    <Content Include="Content\js\element.js" />
-    <Content Include="Content\js\imagesloaded.pkgd.min.js" />
-    <Content Include="Content\js\jquery.bxslider.min.js" />
-    <Content Include="Content\js\jquery.isotope.min.js" />
-    <Content Include="Content\js\jquery.localscroll-1.2.7-min.js" />
-    <Content Include="Content\js\jquery.magnific-popup.js" />
-    <Content Include="Content\js\jquery.min.js" />
-    <Content Include="Content\js\jquery.parallax-1.1.3.js" />
-    <Content Include="Content\js\masonry.pkgd.min.js" />
-    <Content Include="Content\js\modernizr.js" />
-    <Content Include="Content\js\moment-with-locales.js" />
-    <Content Include="Content\js\owl.carousel.js" />
-    <Content Include="Content\js\waypoints.min.js" />
-    <Content Include="Content\js\wow.min.js" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Global.asax" />
-    <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CartController.cs" />
-    <Compile Include="Controllers\ContactUsController.cs" />
-    <Compile Include="Controllers\GalleryController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MenuController.cs" />
-    <Compile Include="Controllers\RezervationController.cs" />
-    <Compile Include="Controllers\SignInController.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
-    <Content Include="Content\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\fonts\FontAwesome.otf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="packages.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Cart\Index.cshtml" />
-    <Content Include="Views\ContactUs\Index.cshtml" />
-    <Content Include="Views\Gallery\Index.cshtml" />
-    <Content Include="Views\Menu\Index.cshtml" />
-    <Content Include="Views\Rezervation\Index.cshtml" />
-    <Content Include="Views\SignIn\Index.cshtml" />
-    <Content Include="Views\Shared\_mLayout.cshtml" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_Start\" />
+    <Folder Include="Content\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
