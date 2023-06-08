@@ -1,0 +1,15 @@
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\Domain.dll.config
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\Domain.dll
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\Domain.pdb
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\BusinessLogic.dll
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\EntityFramework.dll
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\BusinessLogic.pdb
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\BusinessLogic.dll.config
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\EntityFramework.xml
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\obj\Debug\Domain.dll
+C:\Users\djuls\Desktop\SLAVIK\projectWEB\Domain\obj\Debug\Domain.pdb
