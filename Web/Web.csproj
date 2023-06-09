@@ -241,19 +241,10 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 71ae74aa3e4545fa230053581548dbb35d8e3909
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 467af6db4805fc8b580757cb11b19cf8f17d641c
->>>>>>> 71ae74aa3e4545fa230053581548dbb35d8e3909
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\RezervationController.cs" />
