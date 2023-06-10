@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fc6cc7eaac2e4a1ca2ed7b68e11234df" Name="Diagram1">
+      <Diagram DiagramId="5bc61149b9544a90b1b6ea699f233546" Name="Diagram1">
         <EntityTypeShape EntityType="RestaurantModel.Cart" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantModel.CartItem" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantModel.Category" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="RestaurantModel.Item" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantModel.Reservation" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantModel.Role" Width="1.5" PointX="3.75" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="RestaurantModel.sysdiagram" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantModel.User" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="RestaurantModel.UserRole" Width="1.5" PointX="6" PointY="7.375" IsExpanded="true" />
         <AssociationConnector Association="RestaurantModel.FK_Cart_ID" ManuallyRouted="false" />

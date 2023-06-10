@@ -11,5 +11,6 @@ namespace Domain
     {
         public List<Item> cartItems { get; set; }
         public double TotalPrice { get; set; }
+      
     }
 }

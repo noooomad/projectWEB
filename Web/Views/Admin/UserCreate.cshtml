@@ -1,21 +1,28 @@
 ﻿@model BusinessLogic.DB.User
 
 @{
-    ViewBag.Title = "Edit";
+    if (ViewBag.isEdit == false)
+    {
+        ViewBag.isEdit = false;
+    }
+    ViewBag.Title = (ViewBag.isEdit == true) ? "Edit" : "Create";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>@ViewBag.Title</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
+    if (ViewBag.Title == "Edit")
+    {
+        @Html.HiddenFor(model => model.User_ID)
+    }
     <div class="form-horizontal">
         <h4>User</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.User_ID)
 
         <div class="form-group">
             @Html.LabelFor(model => model.User_Email, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -75,12 +82,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="@ViewBag.Title" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "UserIndex")
 </div>

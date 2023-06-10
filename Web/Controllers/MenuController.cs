@@ -31,7 +31,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Food(int Item_id, int? Category_id,string text)
+        public ActionResult Food(int Item_id, int? Category_id, string text)
         {
             RestaurantEntities re = new RestaurantEntities();
             Item it = re.Items.Find(Item_id);

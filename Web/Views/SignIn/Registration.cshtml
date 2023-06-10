@@ -5,40 +5,93 @@
     Layout = "~/Views/Shared/_LayoutLog.cshtml";
 }
 
+@*@using (Html.BeginForm("Registration", "SignIn", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="Regist_block">
+            <a href="~/Home/Index">
+                <img class="logo" alt="Logo" src="~/Content/images/logo.png" />
+            </a>
+
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "login", @id = "email" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-warning" })
+
+            @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "nickname", @id = "nick" } })
+            @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-warning" })
+
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "password", @id = "password" } })
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-warning" })
+
+            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "password", @id = "password" } })
+            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-warning" })
+
+            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "password", @id = "password" } })
+            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-warning" })
+
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "password", @id = "password" } })
+            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-warning" })
+
+            @Html.EditorFor(model => model.AdressName, new { htmlAttributes = new { @class = "password", @id = "password" } })
+            @Html.ValidationMessageFor(model => model.AdressName, "", new { @class = "text-warning" })
+
+            <input class="button" type="submit" value="Enter" />
+            <p class="Login">
+                Already have account?
+                @Html.ActionLink("Sign in", "Login", "Login", null);
+            </p>
+        </div>
+    }*@
+
 @using (Html.BeginForm("Registration", "SignIn", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
-    <div class="Regist_block">
-        <a href="~/Home/Index">
-            <img class="logo" alt="Logo" src="~/Content/images/logo.png" />
-        </a>
+    <div class="form-wrapper">
+        <button type="button" class="switcher switcher-signup">
+            Sign Up
+            <span class="underline"></span>
+        </button>
+        <form class="form form-signup">
+            <fieldset>
+                <div class="input-block">
+                    <label for="signup-email">E-mail</label>
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "login", @id = "signup-email" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-warning" })
+                </div>
+                <div class="input-block">
+                    <label for="signup-email">Login</label>
+                    @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "", @id = "signup-email" } })
+                    @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-warning" })
+                </div>
+                <div class="input-block">
+                    <label for="signup-email">First name</label>
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "", @id = "" } })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-warning" })
+                </div>
+                <div class="input-block">
+                    <label for="signup-email">Last name</label>
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "password", @id = "password" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-warning" })
+                </div>
+                <div class="input-block">
+                    <label for="signup-phone">Phone Number</label>
+                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "password", @id = "password" } })
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-warning" })
+                </div>
+                <div class="input-block">
+                    <label for="signup-phone">Addres</label>
+                    @Html.EditorFor(model => model.AdressName, new { htmlAttributes = new { @class = "password", @id = "password" } })
+                    @Html.ValidationMessageFor(model => model.AdressName, "", new { @class = "text-warning" })
+                </div>
+                <div class="input-block">
+                    <label for="signup-password">Password</label>
+                    @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "", @id = "signup-password" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-warning" })
+                </div>
 
-        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "login", @id = "email" } })
-        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-warning" })
-
-        @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "nickname", @id = "nick" } })
-        @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-warning" })
-
-        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "password", @id = "password" } })
-        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-warning" })
-
-        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "password", @id = "password" } })
-        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-warning" })
-
-        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "password", @id = "password" } })
-        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-warning" })
-
-        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "password", @id = "password" } })
-        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-warning" })
-
-        @Html.EditorFor(model => model.AdressName, new { htmlAttributes = new { @class = "password", @id = "password" } })
-        @Html.ValidationMessageFor(model => model.AdressName, "", new { @class = "text-warning" })
-
-        <input class="button" type="submit" value="Enter" />
-        <p class="Login">
-            Already have account?
-            @Html.ActionLink("Sign in", "Login", "Login", null);
-        </p>
+            </fieldset>
+            <button type="submit" class="btn-signup">Continue</button>
+        </form>
     </div>
 }

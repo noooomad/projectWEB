@@ -1,6 +1,8 @@
 ﻿@model Domain.CartItemsModel
 @{
     Layout = "~/Views/Shared/_mLayout.cshtml";
+    int i = 1;
+    string ss = "star";
 }
 
 <!DOCTYPE html>
@@ -19,6 +21,47 @@
     <link type="text/css" href="/Content/css/bootstrap-datetimepicker.css" rel="stylesheet" />
     <link type="text/css" href="/Content/css/style.css?v=1.0" rel="stylesheet" />
     <link type="text/css" href="/Content/css/media.css?v=1.0" rel="stylesheet" />
+    <script>
+        function setRating(rating, i) {
+            var url = 'star' + i;
+            var starDiv = document.getElementById(url);
+            var children = starDiv.children;
+
+            // Loop through the children
+            for (var i = 0; i < children.length; i++) {
+                children[i].classList.remove('active');
+            }
+
+            // Loop through the children
+            for (var i = 0; i < rating; i++) {
+                children[i].classList.add('active');
+            }
+            event.currentTarget.classList.add('active');
+        }
+
+    </script>
+    <style>
+        .star-rating {
+            display: inline-block;
+        }
+
+        .star {
+            font-family: FontAwesome;
+            font-size: 25px;
+            padding: 0 1px;
+            cursor: pointer;
+        }
+
+            .star:before {
+                content: '\f005';
+                color: #ccc;
+            }
+
+            .star.active:before,
+            .star:hover:before {
+                color: gold;
+            }
+    </style>
 </head>
 
 <body id="mainBox" class="creamBg" data-spy="scroll" data-target="#bs-example-navbar-collapse-1" data-offset="150">
@@ -39,21 +82,30 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <div class="logo">
-                                            <a class="navbar-brand" href="index.html">
-                                                <img src="images/logo.png"
+                                            <a class="navbar-brand" href="/Home/">
+                                                <img src="~/Content/images/logo.png"
                                                      alt="logo" />
                                             </a>
                                         </div>
                                     </div>
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li class="active"><a href="index.html">Home</a></li>
-                                            <li><a href="menu.html">Menu</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="reservation.html">Reservation</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="contactus.html">Contact us</a></li>
-                                            <li><a href="signin.html">Sign in</a></li>
+                                            @if (@User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="/Menu">Menu</a></li>
+                                                <li><a href="/Cart">Cart</a></li>
+                                                <li><a href="/Rezervation">Reservation</a></li>
+                                                <li><a href="/Gallery">Gallery</a></li>
+                                                <li><a href="/ContactUs">Contact us</a></li>
+                                                <li><a href="/SignIn/Logout">Log out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="/Menu">Menu</a></li>
+                                                <li><a href="/Gallery">Gallery</a></li>
+                                                <li><a href="/ContactUs">Contact us</a></li>
+                                                <li><a href="/SignIn/Login">Sign in</a></li>
+                                            }
                                         </ul>
                                     </div>
                                 </div>
@@ -63,16 +115,24 @@
                 </div>
             </div>
         </header>
-    </div>
+    </div><br />
 
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <section>
         <div class="container">
             <div class="menu">
                 <h2 class="menu-group-heading"> </h2>
                 <div class="menu-group">
-                    @foreach (var data in Model.cartItems)
+                    @using (Html.BeginForm("Food", "Menu", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
-                        using (Html.BeginForm("Food", "Menu", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        foreach (var data in Model.cartItems)
                         {
                             <div class=" menu-item">
                                 <img class="customIMG" src="/Content/@data.Item_Image" alt="klassika" />
@@ -82,15 +142,28 @@
                                         <span class="menu-item-price">$@data.Item_Price</span>
                                     </h3>
                                     <p class="menu-item-description">@data.Item_Desc</p>
-                                    <input class="button10" type="submit" value="Add to cart" />
-                                    @*<input class="btn btn-primary" type="submit" value="Create topic" />*@
-                                    @*<a href="#" class="button10">Add to cart</a*@>
+
+                                    @Html.ActionLink("Remove item", "Delete", new { id = data.Item_ID }, new { @class = "" })
+
+                                    <div class="star-rating" id=@(ss+i)>
+                                        <span class="star" data-rating="1" onclick="setRating(1,@i)" id="1@i"></span>
+                                        <span class="star" data-rating="2" onclick="setRating(2,@i)" id="2@i"></span>
+                                        <span class="star" data-rating="3" onclick="setRating(3,@i)" id="3@i"></span>
+                                        <span class="star" data-rating="4" onclick="setRating(4,@i)" id="4@i"></span>
+                                        <span class="star" data-rating="5" onclick="setRating(5,@i)" id="5@i"></span>
+                                        <input type="hidden" name="rating">
+                                    </div>
+                                    @{
+                                        i += 1;
+                                    }
                                 </div>
                             </div>
                         }
+
+                        <h3 style="color:white"> Total price:@Model.TotalPrice</h3>
                     }
+                    <a class="btn btn-primary" href="/Cart/Purchase">"Buy items" </a>
                 </div>
-                <h1 style="color:white"> Total price:@Model.TotalPrice</h1>
             </div>
         </div>
     </section>
@@ -108,5 +181,5 @@
     <script type="text/javascript" src="/Content/js/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="/Content/js/moment-with-locales.js"></script>
     <script type="text/javascript" src="/Content/js/bootstrap-datetimepicker.js"></script>
-
+    <scr
 </body>

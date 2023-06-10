@@ -37,7 +37,7 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <div class="logo">
-                                            <a class="navbar-brand" href="index.html">
+                                            <a class="navbar-brand" href="/Home/">
                                                 <img src="~/Content/images/logo.png"
                                                      alt="logo" />
                                             </a>
@@ -45,13 +45,22 @@
                                     </div>
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li class="active"><a href="index.html">Home</a></li>
-                                            <li><a href="menu.html">Menu</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="reservation.html">Reservation</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="contactus.html">Contact us</a></li>
-                                            <li><a href="signin.html">Sign in</a></li>
+                                            @if (@User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="/Menu">Menu</a></li>
+                                                <li><a href="/Cart">Cart</a></li>
+                                                <li><a href="/Rezervation">Reservation</a></li>
+                                                <li><a href="/Gallery">Gallery</a></li>
+                                                <li><a href="/ContactUs">Contact us</a></li>
+                                                <li><a href="/SignIn/Logout">Log out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="/Menu">Menu</a></li>
+                                                <li><a href="/Gallery">Gallery</a></li>
+                                                <li><a href="/ContactUs">Contact us</a></li>
+                                                <li><a href="/SignIn/Login">Sign in</a></li>
+                                            }
                                         </ul>
                                     </div>
                                 </div>

@@ -1,0 +1,107 @@
+﻿@model Domain.BookedModel
+@{
+    Layout = "~/Views/Shared/_mLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico" type="image/x-icon">
+    <title> The world of taste </title>
+    <link type="text/css" rel="stylesheet" href="~/Content/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="~/Content/css/font-awesome.css">
+    <link type="text/css" href="~/Content/css/animate.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/css/magnific-popup.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/css/style.css?v=1.0" rel="stylesheet" />
+    <link type="text/css" href="~/Content/css/media.css?v=1.0" rel="stylesheet" />
+</head>
+
+<body id="mainBox" class="creamBg" data-spy="scroll" data-target="#bs-example-navbar-collapse-1" data-offset="150">
+    <div id="site-head">
+        <header id="header" class="header-block" data-top="0" data-scroll="100">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-menu">
+                        <div class="menuBar scrollbtn">
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <div class="logo">
+                                            <a class="navbar-brand" href="index.html">
+                                                <img src="~/Content/images/logo.png"
+                                                     alt="logo" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            @if (@User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="/Menu">Menu</a></li>
+                                                <li><a href="/Cart">Cart</a></li>
+                                                <li><a href="/Rezervation">Reservation</a></li>
+                                                <li><a href="/Gallery">Gallery</a></li>
+                                                <li><a href="/ContactUs">Contact us</a></li>
+                                                <li><a href="/SignIn/Logout">Log out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="/Menu">Menu</a></li>
+                                                <li><a href="/Gallery">Gallery</a></li>
+                                                <li><a href="/ContactUs">Contact us</a></li>
+                                                <li><a href="/SignIn/Login">Sign in</a></li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <section id="reservation" class="reservation-block pad-top-100 pad-bottom-100">
+        <div class="container pr">
+            <div class="row">
+                <br />
+                <br />
+                <br />
+                @if (Model != null)
+                {
+                    <h1 style="color:white">SUCCESSFULLY BOOKED RESERVATION</h1>
+                    <h3 style="color:white">Number of persons:@Model.persons</h3>
+                    <h3 style="color:white">Time:@Model.time</h3>
+                    <h3 style="color:white">Date:@Model.date</h3>
+                }
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="~/Content/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/element.js"></script>
+    <script type="text/javascript" src="~/Content/js/modernizr.js"></script>
+    <script type="text/javascript" src="~/Content/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="~/Content/js/wow.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="~/Content/js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap-datetimepicker.js"></script>
+
+</body>

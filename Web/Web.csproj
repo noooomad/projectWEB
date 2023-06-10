@@ -112,10 +112,12 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\jquery.bxslider.css" />
+    <Content Include="Content\css\login.css" />
     <Content Include="Content\css\magnific-popup.css" />
     <Content Include="Content\css\media.css" />
     <Content Include="Content\css\owl.carousel.min.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\styles.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\%281%29Escolar-cu-sos-tahini-350-gr-300x300.png" />
@@ -232,6 +234,7 @@
     <Content Include="Content\js\modernizr.js" />
     <Content Include="Content\js\moment-with-locales.js" />
     <Content Include="Content\js\owl.carousel.js" />
+    <Content Include="Content\js\script.js" />
     <Content Include="Content\js\waypoints.min.js" />
     <Content Include="Content\js\wow.min.js" />
     <Content Include="Content\Site.css" />
@@ -278,11 +281,15 @@
     <Content Include="Views\Shared\_mLayout.cshtml" />
     <Content Include="Views\SignIn\Registration.cshtml" />
     <Content Include="Views\Shared\_LayoutLog.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Admin\UserIndex.cshtml" />
+    <Content Include="Views\Admin\UserCreate.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Menu\Food.cshtml" />
+    <Content Include="Views\Cart\Purchase.cshtml" />
+    <Content Include="Views\Rezervation\Sucess.cshtml" />
+    <Content Include="Views\Cart\Sucess.cshtml" />
+    <Content Include="Views\Admin\ItemIndex.cshtml" />
+    <Content Include="Views\Admin\ItemCreate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

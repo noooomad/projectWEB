@@ -51,60 +51,57 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\Cart.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\CartItem.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Category.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\CategoryItem.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Item.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Reservation.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\Restaurant.Context.cs">
+    <Compile Include="DB\RestaurantEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Restaurant.Context.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\Restaurant.cs">
+    <Compile Include="DB\RestaurantEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\Restaurant.Designer.cs">
+    <Compile Include="DB\RestaurantEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Restaurant.edmx</DependentUpon>
+      <DependentUpon>RestaurantEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Role.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\sysdiagram.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\User.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\UserRole.cs">
-      <DependentUpon>Restaurant.tt</DependentUpon>
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="DB\Restaurant.edmx">
+    <EntityDeploy Include="DB\RestaurantEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Restaurant.Designer.cs</LastGenOutput>
+      <LastGenOutput>RestaurantEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB\Restaurant.edmx.diagram">
-      <DependentUpon>Restaurant.edmx</DependentUpon>
+    <None Include="DB\RestaurantEntities.edmx.diagram">
+      <DependentUpon>RestaurantEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -112,15 +109,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Restaurant.Context.tt">
+    <Content Include="DB\RestaurantEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Restaurant.edmx</DependentUpon>
-      <LastGenOutput>Restaurant.Context.cs</LastGenOutput>
+      <DependentUpon>RestaurantEntities.edmx</DependentUpon>
+      <LastGenOutput>RestaurantEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DB\Restaurant.tt">
+    <Content Include="DB\RestaurantEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Restaurant.edmx</DependentUpon>
-      <LastGenOutput>Restaurant.cs</LastGenOutput>
+      <DependentUpon>RestaurantEntities.edmx</DependentUpon>
+      <LastGenOutput>RestaurantEntities.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,5 +2,21 @@
 @{
     ViewBag.Title = "_LayoutLog";
 }
+<!DOCTYPE html>
+<html lang="en">
 
-@RenderBody()
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Content/css/styles.css">
+</head>
+<body>
+    <section class="forms-section">
+        <div class="forms">
+            @RenderBody()
+        </div>
+    </section>
+    <script src="/Content/js/script.js"></script>
+
+</body>
+</html>

@@ -37,7 +37,7 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <div class="logo">
-                                            <a class="navbar-brand" href="index.html">
+                                            <a class="navbar-brand" href="/Home/">
                                                 <img src="~/Content/images/logo.png"
                                                      alt="logo" />
                                             </a>
@@ -45,13 +45,22 @@
                                     </div>
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li class="active"><a href="index.html">Home</a></li>
-                                            <li><a href="menu.html">Menu</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="reservation.html">Reservation</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="contactus.html">Contact us</a></li>
-                                            <li><a href="signin.html">Sign in</a></li>
+                                            @if (@User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="/Menu">Menu</a></li>
+                                                <li><a href="/Cart">Cart</a></li>
+                                                <li><a href="/Rezervation">Reservation</a></li>
+                                                <li><a href="/Gallery">Gallery</a></li>
+                                                <li><a href="/ContactUs">Contact us</a></li>
+                                                <li><a href="/SignIn/Logout">Log out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="/Menu">Menu</a></li>
+                                                <li><a href="/Gallery">Gallery</a></li>
+                                                <li><a href="/ContactUs">Contact us</a></li>
+                                                <li><a href="/SignIn/Login">Sign in</a></li>
+                                            }
                                         </ul>
                                     </div>
                                 </div>
@@ -62,75 +71,71 @@
             </div>
         </header>
     </div>
+    @using (Html.BeginForm("Sucess", "Rezervation", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <section id="reservation" class="reservation-block pad-top-100 pad-bottom-100">
+            <div class="container pr">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h2 class="block-title text-align-center">
+                            <span class="side-img left-side-img"><i></i><i></i><i></i></span> Reservations<span class="side-img right-side-img"><i></i><i></i><i></i></span>
+                        </h2>
+                        <h5 class="title-caption text-align-center mar-bottom-25">
+                            You can always book seats in our
+                            restaurant in advance, everything will be prepared especially for you.
+                        </h5>
+                        <form class="reservation-block">
 
-    <section id="reservation" class="reservation-block pad-top-100 pad-bottom-100">
-        <div class="container pr">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h2 class="block-title text-align-center">
-                        <span class="side-img left-side-img"><i></i><i></i><i></i></span> Reservations<span class="side-img right-side-img"><i></i><i></i><i></i></span>
-                    </h2>
-                    <h5 class="title-caption text-align-center mar-bottom-25">
-                        You can always book seats in our
-                        restaurant in advance, everything will be prepared especially for you.
-                    </h5>
-                    <form class="reservation-block">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="form-box">
-                                <input type="text" placeholder="Name">
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-box">
+                                    <select name="persons">
+                                        <option selected disabled>No. Of persons</option>
+                                        <option value="1">1</option>
+                                        <option value="3">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="form-box">
-                                <input type="text" placeholder="E-Mail ID">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-box">
+                                    <input type="text" id='date-picker' name="Date" placeholder="Date" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="form-box">
-                                <input type="text" placeholder="contact no.">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-box">
+                                    <input type="text" id='time-picker' placeholder="Time" name="Time" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="form-box">
-                                <select>
-                                    <option selected disabled>No. Of persons</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reserve-book-btn text-align-center">
+                                @*<a href="/Rezervation/Sucess" class="orange-btn">BOOK MY TABLE</a>*@
+                                <input type="submit" class="orange-btn" value="BOOK MY TABLE" />
+                                @*<button type="submit" class="orange-btn" value="BOOK MY TABLE" />*@
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="form-box">
-                                <input type="text" id='date-picker' placeholder="Date" />
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="form-box">
-                                <input type="text" id='time-picker' placeholder="Time" />
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reserve-book-btn text-align-center">
-                            <a href="#" class="orange-btn">BOOK MY TABLE</a>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    }
 
-    <script type="text/javascript" src="~/Content/js/jquery.min.js"></script>
-    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="~/Content/js/element.js"></script>
-    <script type="text/javascript" src="~/Content/js/modernizr.js"></script>
-    <script type="text/javascript" src="~/Content/js/owl.carousel.js"></script>
-    <script type="text/javascript" src="~/Content/js/jquery.localscroll-1.2.7-min.js"></script>
-    <script type="text/javascript" src="~/Content/js/wow.min.js"></script>
-    <script type="text/javascript" src="~/Content/js/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="~/Content/js/jquery.isotope.min.js"></script>
-    <script type="text/javascript" src="~/Content/js/jquery.parallax-1.1.3.js"></script>
-    <script type="text/javascript" src="~/Content/js/jquery.magnific-popup.js"></script>
-    <script type="text/javascript" src="~/Content/js/moment-with-locales.js"></script>
-    <script type="text/javascript" src="~/Content/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.min.js"></script>
+        <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="~/Content/js/element.js"></script>
+        <script type="text/javascript" src="~/Content/js/modernizr.js"></script>
+        <script type="text/javascript" src="~/Content/js/owl.carousel.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.localscroll-1.2.7-min.js"></script>
+        <script type="text/javascript" src="~/Content/js/wow.min.js"></script>
+        <script type="text/javascript" src="~/Content/js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.isotope.min.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.magnific-popup.js"></script>
+        <script type="text/javascript" src="~/Content/js/moment-with-locales.js"></script>
+        <script type="text/javascript" src="~/Content/js/bootstrap-datetimepicker.js"></script>
 
-</body>
+    </body>
